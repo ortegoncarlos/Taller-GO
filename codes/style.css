@@ -1,0 +1,357 @@
+html, body {
+	height:100%;
+	overflow: hidden;
+	
+}
+* {
+	outline:none;
+	
+}
+body {
+	margin:0px;
+	padding:0px;
+	background: none;
+	font-family:'Century Gothic', arial, serif;
+	min-width:570px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family:"concielian_condensedcondensed", "Trebuchet MS", sans-serif;
+	margin:0;
+}
+
+ a {
+	
+	color: #505050;
+}
+
+#slide-one { 
+  background:url(../assets/bg2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#slide-three { 
+  background:url(../assets/bg1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#slide-four { 
+  background:url(../assets/bg3.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#facebook {
+	position:fixed;
+	z-index:4;
+	left:10px;
+	top:10px;
+	padding:10px;
+	color:#FFF;
+	font-size: 30px;
+	letter-spacing: 1px;
+	text-shadow:rgba(0, 0, 0, 0.50) 0 1px 1px;
+}
+hgroup {
+	/*position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:400px;*/
+	margin-top:10%;
+	z-index:3;
+	
+}
+
+hgroup img{
+	
+	margin-left:-284px;
+	padding-left:50%;
+	min-width:500px;
+
+	
+	
+}
+hgroup h1 {
+	margin: 0px;
+	text-shadow:rgba(0, 0, 0, 1) 3px 2px 0;
+}
+hgroup h4 {
+	font-family:'Century Gothic', arial, serif;
+	font-size: 22px;
+	font-weight:normal;
+	margin: 0px;
+}
+hgroup a {
+	text-decoration:none;
+	color: #FFF;
+	border-bottom: 1px dashed #FFF;
+	-webkit-transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+	-o-transition: all 1s ease-out;
+	-ms-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+}
+hgroup a:hover {
+	background: rgba(0, 0, 0, 0.50);
+	-webkit-transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+	-o-transition: all 1s ease-out;
+	-ms-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+}
+
+
+.dwmenu{
+
+}
+
+#barra{
+position:absolute;
+z-index:200;
+top:10px;
+left: 300px;
+height:41px;
+Float: left;}
+
+
+
+#iconos{
+	
+	margin-top:100px;
+	text-align:center;
+		}
+		
+#iconos h1{
+	font-size:12px;
+	font-weight:normal;
+	text-align:center;
+
+	}
+
+#iconos ul li{
+margin-left:5%; 
+margin-top:0.3%; 
+	}
+	
+#logo{
+	background:url(../assets/LogoTop.png) no-repeat;
+	position:fixed;
+	top:0;
+	left:0;
+	height:200px;
+	width:300px;
+	z-index:100;
+	}	
+	
+#bandera{
+	background:url(../assets/BanderaTop.png) no-repeat;
+	position:fixed;
+	top:0;
+	right:0;
+	
+	height:200px;
+	width:300px;
+	z-index:100;
+	
+	}	
+#footer{
+	
+	width:100%;
+	position:fixed;
+	bottom:0;
+	left:0;
+	height:44px;
+	z-index:100;
+	float:left; 
+	color:#CCC;
+	}
+	
+#redes {
+height:41px;
+float:left;
+margin-left: 10px;
+}
+
+#fgroup{
+	background-color: #363434 ;
+	height:41px;
+	float:left;
+	padding: 5px;
+	width: calc(100% - 209px);
+
+/* Firefox */
+width: -moz-calc(100% - 209px);
+/* WebKit */
+width: -webkit-calc(100% - 209px);
+/* Opera */
+width: -o-calc(100% - 209px);
+/* Standard */
+width: calc(100% - 209px);
+	}
+	
+#fcontacto{
+	
+	height:41px;
+	
+	float:left;}	
+
+#fcontacto img {
+	
+	float:left;}
+	
+#fcontacto h4 {
+	margin: 8px;
+	float:left;}
+#dirtel , #dirtel h6, #dirtel img{
+	float: left;
+	line-height: 16px;
+	height: 12px;
+	margin: 0;
+	display: inline-table;
+	margin-left: 10px;
+	}
+#flag{
+	background:url(../assets/BanderaDown.png) no-repeat;
+	width: 530px;
+	height:41px;
+	float: right;
+	display:inline-block;
+	padding-top: 11px;
+	padding-left: 30px;
+
+}
+
+#disena{
+	float: right;
+	background:url(../assets/DisenadoPor.png);
+	height:45px;
+	width:200px;
+	position:absolute;
+	right:0;
+	}
+
+/* ---------------------------------------------------- */
+/* GLOBAL
+/* ---------------------------------------------------- */
+
+
+/* ---------------------------------------------------- */
+/* SLIDESHOW
+/* ---------------------------------------------------- */
+#slideshow {
+width: 100%;
+background-color:#FDD432;
+}
+
+#slideshow ul {
+list-style-type: none;
+height: 1%; /* IE fix */
+}
+ul{
+	
+	padding: 0;}
+#slideshow ul:after {
+content: ".";
+clear: both;
+display: block;
+height: 0;
+visibility: hidden;} 
+
+
+/* ---------------------------------------------------- */
+/* SLIDESHOW > SLIDES
+/* ---------------------------------------------------- */
+#slideshow .slides {
+overflow: hidden;
+width: 100%;
+;
+}
+#slideshow .slides #slide-one{
+}
+
+#slideshow .slides #slide-two{
+}
+
+
+#slideshow .slides ul {
+/* total width of all slides -
+960px multiplied by 3 in this case */
+width: 303%;
+margin:0;}
+
+#slideshow .slides li {
+float: left;
+background-color:#FDD432;
+}
+
+#slideshow .slides h2 {
+margin-top: 0;}
+
+/* ---------------------------------------------------- */
+/* SLIDESHOW > NAVIGATION
+/* ---------------------------------------------------- */
+#slideshow .slides-nav {
+position:relative;
+z-index:200;
+font-family: concielian_condensedcondensed;
+  font-size:1.5em;
+  max-width:530px;
+min-height:36px;
+padding:5px 10px 0 0;
+background-color:#FFF;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px; /* future proofing */
+-khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+
+#slideshow .slides-nav li {
+float: left;
+height:36px;
+Margin: 3px 0px 0px 10px;
+Text-decoration: none;}
+
+#slideshow .slides-nav li a {
+display: block;
+outline: none;
+Text-decoration: none;
+float: left;
+}
+#slideshow .slides-nav li img{ 
+float: left;
+margin-left: 10px;
+}
+/* ---------------------------------------------------- */
+/* SLIDESHOW > aCTIVATION
+/* ---------------------------------------------------- */
+
+#slideshow .slides-nav li.on,
+#slideshow .slides-nav li.on a {
+	color:#FDD432;
+}
+
+#slideshow on .activeSlide .slides-nav li.on a {
+color:#FDD432;
+position: relative;
+font-size: 1.6em;}
+
+/* ---------------------------------------------------- */
+/* SLIDESHOW > PRENDER BOTON 1 CUANDO EMPIEZA
+/* ---------------------------------------------------- */
+
+.js #slideshow .slides-nav li.on,
+.js #slideshow .slides-nav li.on a {
+}
+
+.js #slideshow .slides-nav li.on a {
+	color:#FDD432;
+position: relative;
+top: -4px;}
+
