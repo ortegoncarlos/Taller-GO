@@ -17,9 +17,29 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <!--slides-->
-	<script type="text/javascript" src="codes/jquery.cycle.all.min.js"></script>
-	<script type="text/javascript" src="codes/configslide.js"></script>
+	<!--<script type="text/javascript" src="codes/jquery.cycle.all.min.js"></script>
+	<script type="text/javascript" src="codes/configslide.js"></script>-->
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').stop().animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+
+
 </head>
+
 <body>
 
 <!--inicio slides-->
@@ -39,64 +59,18 @@
    
     <div id="flag"><h3>Revisión y Mantenimineto De Todas Las Marcas</h3></div>
      </div> 
-    <div id="disena"></div>
+    <div id="disena">
+      <img src="assets/DisenadoPor.png" alt="disenadopor"> </div>
  </div>
     
    
    <section id="bg">
  
-   <div id="slideshow">
-            <div class="slides" >
-                <ul id="slideshowx" style="position: relative; height:100%; overflow: hidden; -webkit-margin-before: 0px;" >
-                    <li id="slide-one"  style="width: 34%;height: 100%; ">
-                       <div style="height:900px;"><p></p></div>
-                    </li>
-                    <li id="slide-two" style=" width: 34%; height: 100%;">
-                    <div id="iconos">
-                    <div id="">
-                    <ul>
-                        <li><img src="assets/Aceite.png" width="181" height="94"> <h1>Cambio de Aceite</h1></li>
-                        <li><img src="assets/Alinieamiento.png" width="182" height="93"><h1>Alineacion y Balanceo</h1></li>
-                        <li><img src="assets/Alistamiento.png" width="181" height="93">	<h1>Alistamiento Tecnomecanico</h1>	</li>
-                    </ul>
-                    <ul>
-                        <li><img src="assets/TodaslasMarcas.png" width="182" height="93"><h1>Mantenimiento de todas las Marcas</h1></li>
-                       <li>  <img src="assets/Electricidad.png" width="181" height="93"> <h1> Electricidad y Mecanica Automotriz </h1> </li>
-                       <li>  <img src="assets/Frenos.png" width="181" height="93"> <h1>Revisión De Frenos</h1> </li>
-                    </ul>
-                    <ul>                                            
-                      <li>  <img src="assets/Gral-Especializada.png" width="181" height="93"><h1>Mencanica General y Especializada</h1> </li>
-                       <li>  <img src="assets/Preventivo.png" width="182" height="94"> <h1>Mantenimiento Preventivo</h1> </li>
-                       <li>  <img src="assets/Revision.png" width="182" height="93"><h1>Revisión Tecnomecanica</h1> </li>
-                    </ul>
-                    <ul>                                            
-                       <li>  <img src="assets/Scanner.png" width="181" height="93"> <h1>Servicio de Scanner</h1> </li>
-                       <li>  <img src="assets/Sincronizaciom.png" width="181" height="94"> <h1>Sincronización</h1> </li>
-                       <li>  <img src="assets/Suspencion.png" width="181" height="93"> <h1>Suspensión</h1> </li>
-                    </ul>
-                    
-                    </div>
-                        </div>
-                    </li>
-                    <li id="slide-three" style=" width: 34%; height: 100%;">
-                          <div id="">
-                                                  
-                          </div>
-                    </li>
-                    
-                    <li id="slide-four" style=" width: 34%; height: 100%;">
-                          <div id="">
-                                                  
-                          </div>
-                    </li>
-                    
-                </ul>
-            </div>
-            
+   <article id="slideshow">
         <div id="barra">    
          <div class="dwmenu">
-            <ul class="slides-nav">
-                <li class="on"><a href="#slide-one">Inicio</a></li>
+            <ul class="slides-nav" id="top-menu">
+                <li class="active"><a href="#slide-one">Inicio</a></li>
                 <li><a href="#slide-two">Servicio</a></li>
                 <li><a href="#slide-three">Quienes Somos</a></li>
                 <li><a href="#slide-four">Contactenos</a></li>
@@ -104,25 +78,121 @@
            </div>
             
          </div>
+            <div class="slides" >
+                    <section id="slide-one"  style="width: 100%;height: 100%; ">
+                       <div style="height:100%;"><p></p></div>
+                    </section>
+                    <section id="slide-two" style=" width: 100%; height: 100%;">
+                    <div id="iconos">
+                    <div id="">
+                    <ul>
+                        <li><img src="assets/Aceite.png" width="181" height="94"> <h1>Cambio de Aceite</h1></li>
+                        <li><img src="assets/Alinieamiento.png" width="182" height="93"><h1>Alineacion y Balanceo</h1></li>
+                        <li><img src="assets/Alistamiento.png" width="181" height="93">	<h1>Alistamiento Tecnomecanico</h1>	</li>
+
+                        <li><img src="assets/TodaslasMarcas.png" width="182" height="93"><h1>Mantenimiento de todas las Marcas</h1></li>
+                       <li>  <img src="assets/Electricidad.png" width="181" height="93"> <h1> Electricidad y Mecanica Automotriz </h1> </li>
+                       <li>  <img src="assets/Frenos.png" width="181" height="93"> <h1>Revisión De Frenos</h1> </li>
+                                          
+                      <li>  <img src="assets/Gral-Especializada.png" width="181" height="93"><h1>Mencanica General y Especializada</h1> </li>
+                       <li>  <img src="assets/Preventivo.png" width="182" height="94"> <h1>Mantenimiento Preventivo</h1> </li>
+                       <li>  <img src="assets/Revision.png" width="182" height="93"><h1>Revisión Tecnomecanica</h1> </li>
+                                           
+                       <li>  <img src="assets/Scanner.png" width="181" height="93"> <h1>Servicio de Scanner</h1> </li>
+                       <li>  <img src="assets/Sincronizaciom.png" width="181" height="94"> <h1>Sincronización</h1> </li>
+                       <li>  <img src="assets/Suspencion.png" width="181" height="93"> <h1>Suspensión</h1> </li>
+                    </ul>
+                    
+                    </div>
+                        </div>
+                    </section>
+                    <section id="slide-three" style=" width: 100%; height: 100%;">
+                          <div id="">
+                                                  
+                          </div>
+                    </section>
+                    
+                    <section id="slide-four" style=" width: 100%; height: 100%;">
+                          <div id="">
+                                                  
+                          </div>
+                    </section>
+                    
+                </ul>
+            </div>
+            
+
     </div>
         
 <!--fin slides-->    
 <script>
  window.onload = function altoscroller() {
  var h = window.innerHeight;
-  document.getElementById('slideshowx').style.height= h +"px";
+  document.getElementById('slide-one').style.height= h +"px";
+  document.getElementById('slide-two').style.height= h +"px";
+  document.getElementById('slide-three').style.height= h +"px";
+  document.getElementById('slide-four').style.height= h +"px";
 
 }
 
-window.onresize = function(){
+window.onresize = function resizescroller(){
   var h = window.innerHeight;
   var w = window.innerWidth;
-   document.getElementById('slideshowx').style.height= h +"px";
+   document.getElementById('slide-one').style.height= h +"px";
+  document.getElementById('slide-two').style.height= h +"px";
+  document.getElementById('slide-three').style.height= h +"px";
+  document.getElementById('slide-four').style.height= h +"px";
 
    
        }
 </script>
+<script>
+// Cache selectors
+var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
 
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
