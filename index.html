@@ -10,18 +10,22 @@
 <title>Taller GO Gabriel Orozco </title>
 <link rel="stylesheet" href="codes/style.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="codes/font/font.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="codes/magnific-popup.css">
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 <link rel="stylesheet" href="codes/normalize.css" class="css">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<script src="codes/jquery.magnific-popup.min.js"> </script>
+
 <!--slides-->
 	<!--<script type="text/javascript" src="codes/jquery.cycle.all.min.js"></script>
 	<script type="text/javascript" src="codes/configslide.js"></script>-->
-<script>
+<!--<script>
 $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
+  $('a[href*=#]:not([href=#][])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -34,7 +38,7 @@ $(function() {
     }
   });
 });
-</script>
+</script>-->
 
 
 
@@ -86,7 +90,8 @@ $(function() {
                     <div id="iconos">
                     <div id="">
                     <ul>
-                        <li><img src="assets/Aceite.png" width="181" height="94"> <h1>Cambio de Aceite</h1></li>
+
+                        <li><a href="#test-popup" class="open-popup-link"><img src="assets/Aceite.png" width="181" height="94"> <h1>Cambio de Aceite</h1></a></li>
                         <li><img src="assets/Alinieamiento.png" width="182" height="93"><h1>Alineacion y Balanceo</h1></li>
                         <li><img src="assets/Alistamiento.png" width="181" height="93">	<h1>Alistamiento Tecnomecanico</h1>	</li>
 
@@ -150,7 +155,7 @@ window.onresize = function resizescroller(){
 // Cache selectors
 var lastId,
     topMenu = $("#top-menu"),
-    topMenuHeight = topMenu.outerHeight()+15,
+    topMenuHeight = topMenu.outerHeight(),
     // All list items
     menuItems = topMenu.find("a"),
     // Anchors corresponding to menu items
@@ -163,7 +168,7 @@ var lastId,
 // so we can get a fancy scroll animation
 menuItems.click(function(e){
   var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+      offsetTop = href === "#" ? 0 : $(href).offset().top;
   $('html, body').stop().animate({ 
       scrollTop: offsetTop
   }, 300);
@@ -191,6 +196,16 @@ $(window).scroll(function(){
          .parent().removeClass("active")
          .end().filter("[href=#"+id+"]").parent().addClass("active");
    }                   
+});
+</script>
+
+<div id="test-popup" class="white-popup mfp-hide">
+  Popup content
+</div>
+<script type="text/javascript">
+$('.open-popup-link').magnificPopup({
+  type:'inline',
+  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 });
 </script>
 <script>
