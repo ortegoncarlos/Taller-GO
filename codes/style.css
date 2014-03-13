@@ -446,17 +446,34 @@ top: -4px;}
 	#iconos ul li{
 		width: 60px;
 		height: 75px;
-		margin-left:6%; 
+		margin-left:1.5%; 
 		margin-top:2.3%;
 	}
-	 
-@media (max-width: @iphone-screen) {
-       #slide-one{
-
-        background-attachment: scroll;
-    	}
+	 #slide-one
+       {
+       	background-position: 50% top;
+		  -webkit-background-size: auto 100%;
+		  -moz-background-size: auto 100%;
+		  -o-background-size: auto 100%;
+		  background-size: auto 100%;
+}
+       #slide-three
+       {
+       	background-position: 50% 50%;
+		  -webkit-background-size:  auto 50%;
+		  -moz-background-size: auto 50%;
+		  -o-background-size: auto 50%;
+		  background-size: auto 50%;
+    	
 	}
-	 
+	 #slide-four
+       {
+       	background-position: center bottom;
+		  -webkit-background-size:  auto 30%;
+		  -moz-background-size: auto 30%;
+		  -o-background-size: auto 30%;
+		  background-size: auto 30%;
+		}
 }
 @media screen and (min-width: 525px) and (max-width: 1025px) {
 	
@@ -509,9 +526,35 @@ top: -4px;}
 	#iconos ul li{
 		width: 60px;
 		height: 75px;
-		margin-left:15%; 
+		margin-left:3%; 
 		margin-top:2.3%;
 	}
+		 #slide-one
+       {
+       	background-position: 50% top;
+		  -webkit-background-size:  auto 45%;
+		  -moz-background-size: auto 45%;
+		  -o-background-size: auto 45%;
+		  background-size: auto 45%;
+}
+       #slide-three
+       {
+       	background-position: 50% 50%;
+		  -webkit-background-size:  auto 50%;
+		  -moz-background-size: auto 50%;
+		  -o-background-size: auto 50%;
+		  background-size: auto 50%;
+    	
+	}
+	 #slide-four
+       {
+       	background-position: 50% bottom;
+		  -webkit-background-size:  auto 50%;
+		  -moz-background-size: auto 50%;
+		  -o-background-size: auto 50%;
+		  background-size: auto 50%;
+		}
+}
 }
 @media screen and (min-width: 1024px) {
 	

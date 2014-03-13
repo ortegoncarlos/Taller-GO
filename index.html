@@ -7,21 +7,43 @@
       type="image/png" 
       href="images/favicon.png">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
 <title>Taller GO Gabriel Orozco </title>
 <link rel="stylesheet" href="codes/style.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="codes/font/font.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="codes/magnific-popup.css">
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 <link rel="stylesheet" href="codes/normalize.css" class="css">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
 
 <script src="codes/jquery.magnific-popup.min.js"> </script>
+<script>
+ window.onload = function altoscroller() {
+ var h = window.innerHeight;
+  document.getElementById('slide-one').style.height= h +"px";
+  document.getElementById('slide-two').style.height= h +"px";
+  document.getElementById('slide-three').style.height= h +"px";
+  document.getElementById('slide-four').style.height= h +"px";
 
+}
+
+window.onresize = function resizescroller(){
+  var h = window.innerHeight;
+  var w = window.innerWidth;
+   document.getElementById('slide-one').style.height= h +"px";
+  document.getElementById('slide-two').style.height= h +"px";
+  document.getElementById('slide-three').style.height= h +"px";
+  document.getElementById('slide-four').style.height= h +"px";       }
+</script>
 <!--slides-->
-	<!--<script type="text/javascript" src="codes/jquery.cycle.all.min.js"></script>
+	<!--
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+
+  <script type="text/javascript" src="codes/jquery.cycle.all.min.js"></script>
 	<script type="text/javascript" src="codes/configslide.js"></script>-->
 <!--<script>
 $(function() {
@@ -112,15 +134,11 @@ $(function() {
                         </div>
                     </section>
                     <section id="slide-three" style=" width: 100%; height: 100%;">
-                          <div id="">
-                                                  
-                          </div>
+                            <div style="height:100%;"><p></p></div>
                     </section>
                     
                     <section id="slide-four" style=" width: 100%; height: 100%;">
-                          <div id="">
-                                                  
-                          </div>
+                            <div style="height:100%;"><p></p></div>
                     </section>
                     
                 </ul>
@@ -130,27 +148,7 @@ $(function() {
     </div>
         
 <!--fin slides-->    
-<script>
- window.onload = function altoscroller() {
- var h = window.innerHeight;
-  document.getElementById('slide-one').style.height= h +"px";
-  document.getElementById('slide-two').style.height= h +"px";
-  document.getElementById('slide-three').style.height= h +"px";
-  document.getElementById('slide-four').style.height= h +"px";
 
-}
-
-window.onresize = function resizescroller(){
-  var h = window.innerHeight;
-  var w = window.innerWidth;
-   document.getElementById('slide-one').style.height= h +"px";
-  document.getElementById('slide-two').style.height= h +"px";
-  document.getElementById('slide-three').style.height= h +"px";
-  document.getElementById('slide-four').style.height= h +"px";
-
-   
-       }
-</script>
 <script>
 // Cache selectors
 var lastId,
