@@ -449,31 +449,7 @@ top: -4px;}
 		margin-left:1.5%; 
 		margin-top:2.3%;
 	}
-	 #slide-one
-       {
-       	background-position: 50% top;
-		  -webkit-background-size: auto 100%;
-		  -moz-background-size: auto 100%;
-		  -o-background-size: auto 100%;
-		  background-size: auto 100%;
-}
-       #slide-three
-       {
-       	background-position: 50% 50%;
-		  -webkit-background-size:  auto 50%;
-		  -moz-background-size: auto 50%;
-		  -o-background-size: auto 50%;
-		  background-size: auto 50%;
-    	
-	}
-	 #slide-four
-       {
-       	background-position: center bottom;
-		  -webkit-background-size:  auto 30%;
-		  -moz-background-size: auto 30%;
-		  -o-background-size: auto 30%;
-		  background-size: auto 30%;
-		}
+
 }
 @media screen and (min-width: 525px) and (max-width: 1025px) {
 	
@@ -522,6 +498,7 @@ top: -4px;}
 	#iconos ul{
 
 		width: 50px;
+		padding-top: 30px;
 	}
 	#iconos ul li{
 		width: 60px;
@@ -529,32 +506,7 @@ top: -4px;}
 		margin-left:3%; 
 		margin-top:2.3%;
 	}
-		 #slide-one
-       {
-       	background-position: 50% top;
-		  -webkit-background-size:  auto 45%;
-		  -moz-background-size: auto 45%;
-		  -o-background-size: auto 45%;
-		  background-size: auto 45%;
-}
-       #slide-three
-       {
-       	background-position: 50% 50%;
-		  -webkit-background-size:  auto 50%;
-		  -moz-background-size: auto 50%;
-		  -o-background-size: auto 50%;
-		  background-size: auto 50%;
-    	
-	}
-	 #slide-four
-       {
-       	background-position: 50% bottom;
-		  -webkit-background-size:  auto 50%;
-		  -moz-background-size: auto 50%;
-		  -o-background-size: auto 50%;
-		  background-size: auto 50%;
-		}
-}
+
 }
 @media screen and (min-width: 1024px) {
 	

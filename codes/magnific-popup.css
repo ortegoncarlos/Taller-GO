@@ -106,7 +106,7 @@
 button.mfp-close, button.mfp-arrow {
   overflow: visible;
   cursor: pointer;
-  background: transparent;
+  background: white;
   border: 0;
   -webkit-appearance: none;
   display: block;
@@ -114,7 +114,12 @@ button.mfp-close, button.mfp-arrow {
   padding: 0;
   z-index: 1046;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: none; 
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+}
 button::-moz-focus-inner {
   padding: 0;
   border: 0; }
@@ -124,7 +129,7 @@ button::-moz-focus-inner {
   height: 44px;
   line-height: 44px;
   position: absolute;
-  right: 0;
+  right: calc(50% - 421px);
   top: 0;
   text-decoration: none;
   text-align: center;
@@ -334,8 +339,18 @@ img.mfp-img {
     background: rgba(0, 0, 0, 0.6);
     position: fixed;
     text-align: center;
-    padding: 0; } }
+    padding: 0; } 
 
+
+
+  }
+
+  @media all and (max-width: 800px){
+  .mfp-close {
+   right: 0px;
+   top: 20px;
+    }
+  }
 @media all and (max-width: 900px) {
   .mfp-arrow {
     -webkit-transform: scale(0.75);
