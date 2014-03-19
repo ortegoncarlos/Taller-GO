@@ -367,6 +367,26 @@ font-size: 1.6em;}
 position: relative;
 top: -4px;}
 
+/* ---------------------------------------------------- */
+/* POPUP
+/* ---------------------------------------------------- */
+
+ .ajax-text-and-image {
+   max-width:800px; margin: 20px auto; background: #FFF; padding: 0; line-height: 0;
+ }
+ .ajcol {
+   width: 50%; float:left;
+ }
+ .ajcol img {
+   width: 100%; height: auto;
+ }
+ @media all and (max-width:30em) {
+   .ajcol { 
+     width: 100%;
+     float:none;
+  }
+ }
+
 @media screen and (max-width: 524px) {
 
 
