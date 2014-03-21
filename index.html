@@ -1,7 +1,11 @@
 <!doctype html>
 <html>
 <head>
-<META NAME="description" CONTENT="">
+<META NAME="Taller de mencánia especializada, Coordinador Tecnico - Sofasa Renault 
+Especializado en Mecánica Automotriz" CONTENT="Gabriel Orozo 
+Coordinador Tecnico - Sofasa Renault 
+Especializado en Mecánica Automotriz
+Queremos garantizar a nuestros clientes la satsfacción de recibir un servicio de calidad que cuenta con más de 14 años de experiencia.">
 <META NAME="robot" CONTENT="index,follow">
 <link rel="icon" 
       type="image/png" 
@@ -11,17 +15,83 @@
 
 
 
-<title>Taller GO Gabriel Orozco </title>
+<title>Taller GO! de Gabriel Orozco - Coordinador Tecnico - Sofasa Renault 
+Especializado en Mecánica Automotriz</title>
 <link rel="stylesheet" href="codes/style.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="codes/font/font.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="codes/magnific-popup.css">
 <link rel="stylesheet" href="codes/normalize.css" class="css">
+
+
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 
 <script src="codes/jquery.magnific-popup.min.js"> </script>
 
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+
+<script>
+ 
+// validate contact form
+
+$(function xx() {
+    $("#contact").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            message: {
+                required: true
+            },
+            answer: {
+                required: true,
+                answercheck: true
+            }
+        },
+        messages: {
+            name: {
+                required: "come on, you have a name don't you?",
+                minlength: "your name must consist of at least 2 characters"
+            },
+            email: {
+                required: "no email, no message"
+            },
+            message: {
+                required: "um...yea, you have to write something to send this form.",
+                minlength: "thats all? really?"
+            },
+           
+        },
+        submitHandler: function(form) {
+            $(form).ajaxSubmit({
+                type:"POST",
+                data: $(form).serialize(),
+                url:"process.php",
+                success: function() {
+                    $('#contact :input').attr('disabled', 'disabled');
+                    $('#contact').fadeTo( "slow", 0.15, function() {
+                        $(this).find(':input').attr('disabled', 'disabled');
+                        $(this).find('label').css('cursor','default');
+                        $('#success').fadeIn();
+                    });
+                },
+                error: function() {
+                    $('#contact').fadeTo( "slow", 0.15, function() {
+                        $('#error').fadeIn();
+                    });
+                }
+            });
+        }
+    });
+});
+</script>
 
 <script>
 
@@ -37,7 +107,8 @@
    var w = $(window).width();
    var x = (h/w);
 
-
+$("#map-canvas").css({"width":w+"px"});
+$("#map-canvas").css({"height":h*0.15+"px"});
 
     $("section[id^='slide-']").css({"height": h +"px"});
       if ( x >0.66){
@@ -73,12 +144,30 @@
 
   };
 
-
-
-
-
-
 </script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+function initialize() {
+  var myLatlng = new google.maps.LatLng(4.660374, -74.070194);
+  var mapOptions = {
+    zoom: 16,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Hello World!'
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
 </head>
 
 <body>
@@ -146,18 +235,62 @@
                         </div>
                     </section>
                     <section id="slide-three" style=" width: 100%; height: 100%;">
-                            <div style="height:100%;"><p></p></div>
+                            <div id="s3" style="height:100%;">
+
+                              <div class="derecha xc1"> 
+                                <div>
+                                <img src="assets/DonGabriel.png" alt="DonGabriel" style="width: 90px; height:90px;">
+                                 </div>
+                                 <div>
+                                <p> Gabriel Orozo </br> Coordinador Tecnico - Sofasa Renault </br> Especializado en Mecánica Automotriz</p>
+                                </div>
+                              </div>
+                              <div class="derecha"><p>Queremos garantizar a nuestros clientes la satsfacción de recibir un servicio de calidad que cuenta con más de 14 años de experiencia.</p></div>
+                              <div class="derecha"><p>En el 2015 seremos una empresa sólida en el sector automotriz y de repuestos, ofreciendo además Xxxxxxxxxxxxxx</p></div>
+
+                            </div>
                     </section>
                     
                     <section id="slide-four" style=" width: 100%; height: 100%;">
-                            <div style="height:100%;"><p></p></div>
+                            <div style="height:100%;">
+                              <form id="contact" name="contact" method="post">  
+                                    <fieldset>  
+                                      <label for="name" id="name">Nombre<span class="required">*</span></label>
+                                      <input type="text" name="name" id="name" size="30" value="" required/>
+                                   
+                                      <label for="email" id="email">Email<span class="required">*</span></label>
+                                      <input type="text" name="email" id="email" size="30" value="" required/>
+                                   
+                                      <label for="phone" id="phone">Telefono</label>
+                                      <input type="text" name="phone" id="phone" size="30" value="" />
+                                   
+                                      <label for="Message" id="message">Mensaje<span class="required">*</span></label>
+                                      <textarea name="message" id="message" required></textarea>
+                                                                      
+                                      <input id="submit" type="submit" name="submit" value="Send" />  
+                                    </fieldset>  
+                                  </form>
+                                   
+                                  <div id="success">
+                                    <span>
+                                      <p>Your message was sent succssfully! I will be in touch as soon as I can.</p>
+                                    </span>
+                                  </div>
+                                   
+                                  <div id="error">
+                                    <span>
+                                      <p>Something went wrong, try refreshing and submitting the form again.</p>
+                                    </span>
+                                  </div>
+
+
+                              <div id="map-canvas"></div>
+                            </div>
                     </section>
                     
-                </ul>
-            </div>
-            
-
-    </div>
+</articule>
+ </section>
+    
         
 <!--fin slides-->    
 
@@ -225,7 +358,6 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 <div id="link-2" class="white-popup mfp-hide">
     <div class="mfp-content">
@@ -243,7 +375,6 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 <div id="link-3" class="white-popup mfp-hide">
     <div class="mfp-content">
@@ -261,7 +392,6 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 <div id="link-4" class="white-popup mfp-hide">
     <div class="mfp-content">
@@ -279,7 +409,6 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 <div id="link-5" class="white-popup mfp-hide">
     <div class="mfp-content">
@@ -297,7 +426,6 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 <div id="link-6" class="white-popup mfp-hide">
     <div class="mfp-content">
@@ -315,7 +443,6 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 <div id="link-7" class="white-popup mfp-hide">
     <div class="mfp-content">
@@ -333,7 +460,6 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 <div id="link-8" class="white-popup mfp-hide">
     <div class="mfp-content">
@@ -351,7 +477,6 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 <div id="link-9" class="white-popup mfp-hide">
     <div class="mfp-content">
@@ -369,9 +494,8 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
-<div id="link" class="white-popup mfp-hide">
+<div id="link-10" class="white-popup mfp-hide">
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
@@ -387,9 +511,8 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
-<div id="link" class="white-popup mfp-hide">
+<div id="link-11" class="white-popup mfp-hide">
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
@@ -405,9 +528,8 @@ $(window).scroll(function(){
       </div>
     </div>
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
-<div id="link" class="white-popup mfp-hide">
+<div id="link-12" class="white-popup mfp-hide">
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
@@ -422,11 +544,9 @@ $(window).scroll(function(){
             <div style="clear:both; line-height: 0;"></div>
       </div>
     </div>
+                <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+
 </div>
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
-
-
-
 
 
 <script type="text/javascript">
@@ -435,6 +555,7 @@ $('.open-popup-link').magnificPopup({
   midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 });
 </script>
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
