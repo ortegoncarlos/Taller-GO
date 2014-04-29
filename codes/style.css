@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #slide-three { 
-  background:url(../assets/bg1.jpg) no-repeat center center fixed; 
+  background:url(../assets/bg1.jpg) repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #slide-four { 
-  background:url(../assets/bg3.jpg) no-repeat center center fixed; 
+  background:url(../assets/bg3.jpg) repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -272,6 +272,11 @@ width: calc(100% - 207px);
 	float: right;
 
 }
+#dong{
+width: 90px;
+height:90px;
+}
+
 /* ---------------------------------------------------- */
 /* GLOBAL
 /* ---------------------------------------------------- */
@@ -434,7 +439,7 @@ fieldset{
 	opacity: 0.9;
 	width: 38%;
 	max-width: 500px;
-	min-width: 300px;
+	min-width: 280px;
 
 }
 form label {
@@ -472,7 +477,7 @@ form input[type="text"], form textarea {
     -moz-border-radius:0.2em;
     -webkit-border-radius:0.2em;
     border-radius:0.2em;
-    width: 100%;
+    width: 95%;
 
 }
 #message {
@@ -522,6 +527,17 @@ fieldset {
 
 
 @media screen and (max-width: 524px) {
+
+	#s3{
+	font-size: 13px;
+	}
+	
+	#dong{
+	width: 50px;
+	height:50px;
+
+	}
+
 
 
 	#logo img{
@@ -603,6 +619,10 @@ fieldset {
 		margin-left:1.5%; 
 		margin-top:2.3%;
 	}
+	section{
+	overflow:show;
+	}
+
 
 }
 @media screen and (min-width: 525px) and (max-width: 1025px) {
@@ -669,4 +689,11 @@ fieldset {
 }
 @media screen and (min-width: 1024px) {
 	
+}
+#link-fb > div {
+    margin-left: -150px;
+    padding-left: 50%;
+}
+#link-fb > div > span > iframe {
+    background: white;
 }

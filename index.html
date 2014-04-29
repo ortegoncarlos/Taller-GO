@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
 <head>
 <META NAME="Taller de mencánia especializada, Coordinador Tecnico - Sofasa Renault 
 Especializado en Mecánica Automotriz" CONTENT="Gabriel Orozo 
@@ -7,13 +8,11 @@ Coordinador Tecnico - Sofasa Renault
 Especializado en Mecánica Automotriz
 Queremos garantizar a nuestros clientes la satsfacción de recibir un servicio de calidad que cuenta con más de 14 años de experiencia.">
 <META NAME="robot" CONTENT="index,follow">
-<link rel="icon" 
-      type="image/png" 
-      href="images/favicon.png">
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-
+<link rel="shortcut icon" href="favicon.ico?v=2" />
 
 <title>Taller GO! de Gabriel Orozco - Coordinador Tecnico - Sofasa Renault 
 Especializado en Mecánica Automotriz</title>
@@ -57,15 +56,15 @@ $(function xx() {
         },
         messages: {
             name: {
-                required: "come on, you have a name don't you?",
-                minlength: "your name must consist of at least 2 characters"
+                required: "yo se que tienes un nombre, no?",
+                minlength: "Tus papas solo te pusieron 2 letras de nombre, no creo"
             },
             email: {
-                required: "no email, no message"
+                required: "queremos responderte, sin e-mail no hay mensaje."
             },
             message: {
-                required: "um...yea, you have to write something to send this form.",
-                minlength: "thats all? really?"
+                required: "Si!, debes escribir algo de lo contrario cual sería el sentido.",
+                minlength: "eso es todo lo que me quieres decir? en serio?"
             },
            
         },
@@ -133,6 +132,7 @@ $("#map-canvas").css({"height":h*0.15+"px"});
                     document.getElementById("slide-two").style.backgroundPosition="center "+h*1+"px"; 
                     document.getElementById("slide-three").style.backgroundPosition="center "+h*2.5+"px"; 
                     document.getElementById("slide-four").style.backgroundPosition="center "+h*3.7+"px"; 
+                    $("section[id^='slide-']").css({"height": h*1.2 +"px"});
                     } 
                     if (navigator.userAgent.indexOf('iPad') != -1) {
                     document.getElementById("slide-one").style.backgroundPosition="center "+h*0+"px"; 
@@ -160,7 +160,7 @@ function initialize() {
   var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
-      title: 'Hello World!'
+      title: 'Taller G0!!!'
   });
 }
 
@@ -172,6 +172,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 <body>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=320935871268195";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <!--inicio slides-->
  <div id="logo"><img src="assets/LogoTop.png" alt=""></div>
  <div id="bandera"></div>
@@ -179,8 +188,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
  	<div id="fgroup">
         <div id="fcontacto"><img src="assets/Contacto.png" width="28" height="31"><h4>Contactenos</h4></div>
         <div id="redes">
-        <a href="http://www.facebook.com/gabrielorozco"><img src="assets/Facebook.png"/></a>
-        <a href="http://www.twitter.com/comservilog"><img src="assets/Twitt.png"/></a>
+        
+        <a href="#link-fb" class="open-popup-link"><img src="assets/Facebook.png"/></a>
+      <!-- <a href="#link-tw" class="open-popup-link"><img src="assets/Twitt.png"/></a>-->
+      <a href="http://twitter.com/GOtaller"><img src="assets/Twitt.png"/></a>
         </div>
         <div id="dirtel">
             <div id="dir"><img src="assets/Direccion.png" width="15" height="13"><h6>Cra 26 Nº 68-32 Alcázares</h6></div>
@@ -239,7 +250,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
                               <div class="derecha xc1"> 
                                 <div>
-                                <img src="assets/DonGabriel.png" alt="DonGabriel" style="width: 90px; height:90px;">
+                                <img id="dong" src="assets/DonGabriel.png" alt="DonGabriel" >
                                  </div>
                                  <div>
                                 <p> Gabriel Orozo </br> Coordinador Tecnico - Sofasa Renault </br> Especializado en Mecánica Automotriz</p>
@@ -273,13 +284,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
                                    
                                   <div id="success">
                                     <span>
-                                      <p>Your message was sent succssfully! I will be in touch as soon as I can.</p>
+                                      <p>Su mensaje fue enviado exitosamente, estaremos en contacto muy pronto.</p>
                                     </span>
                                   </div>
                                    
                                   <div id="error">
                                     <span>
-                                      <p>Something went wrong, try refreshing and submitting the form again.</p>
+                                      <p>mmmm... no dio starter, algo salió mal con el envio revisa los datos e intenat de nuevo, si no te sirve definitivamente contactanos al telefono a por las redes sociales.</p>
                                     </span>
                                   </div>
 
@@ -346,7 +357,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/cambio-aceite.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -363,7 +374,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/alineacion.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -380,7 +391,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/alistamiento.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -397,7 +408,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/TodaslasMarcas.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -414,7 +425,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/Electricidad.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -431,7 +442,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/frenos1.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -448,7 +459,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/cadena.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -465,7 +476,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/mecanicos.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -482,7 +493,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/RevisionTM.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -499,7 +510,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/Scanner.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -516,7 +527,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/Sincronizacion.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -533,7 +544,7 @@ $(window).scroll(function(){
     <div class="mfp-content">
       <div class="ajax-text-and-image white-popup-block">
         <div class="ajcol">
-            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg/603px-Marabou_stork%2C_Leptoptilos_crumeniferus_edit1.jpg">
+            <img src="assets/fotos/Suspencion.jpg">
         </div>
         <div class="ajcol" style="line-height: 1.231;">
             <div style="padding: 1em">
@@ -547,13 +558,23 @@ $(window).scroll(function(){
                 <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 </div>
+<div id="link-fb" class="white-popup mfp-hide">
+<div class="fb-like-box" data-href="https://www.facebook.com/GoTaller" data-width="280px" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
+</div>
 
+
+<div id="link-tw" class="white-popup mfp-hide">
+<a class="twitter-timeline" href="https://twitter.com/GOtaller" data-widget-id="449323753218912256">Tweets por @GOtaller</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
 
 <script type="text/javascript">
 $('.open-popup-link').magnificPopup({
   type:'inline',
-  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you dont provide alternative source in href.
 });
+
 </script>
 
 
